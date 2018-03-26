@@ -213,7 +213,8 @@ systemctl enable etcd.service && systemctl start etcd.service
 > 在 A 執行看看
 
 ```
-$ ETCDCTL_API=3 etcdctl     --cacert=${CA}/etcd-ca.pem     --cert=${CA}/etcd.pem     --key=${CA}/etcd-key.pem     --endpoints="https://10.140.0.2:2379"     endpoint health
+$ CA=/etc/etcd/ssl
+$ ETCDCTL_API=3 etcdctl     --cacert=${CA}/etcd-ca.pem     --cert=${CA}/etcd.pem     --key=${CA}/etcd-key.pem     --endpoints="https://10.140.0.2:2379"     endpoint health
 https://10.140.0.2:2379 is healthy: successfully committed proposal: took = 699.357µs
 ```
 
