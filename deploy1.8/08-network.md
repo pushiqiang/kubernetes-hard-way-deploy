@@ -21,7 +21,7 @@ $ mkdir -p /etc/kubernetes/network && cd /etc/kubernetes/network
 $ calico.yaml
 ```
 ```yaml
-piVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: calico-kube-controllers
